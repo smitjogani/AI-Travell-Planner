@@ -36,7 +36,7 @@ const TripDetails = () => {
         backgroundColor: Colors.WHITE,
       }}
     >
-            <Image source={{ uri: 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=' + formateData(tripDetails?.tripData)?.locationInfo?.photoRef + '&key=' + process.env.EXPO_PUBLIC_GOOGLE_MAP_KEY }}
+      <Image source={{ uri: 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=' + formateData(tripDetails?.tripData)?.locationInfo?.photoRef + '&key=' + process.env.EXPO_PUBLIC_GOOGLE_MAP_KEY }}
         style={{
           width: '100%',
           height: 400,
@@ -92,11 +92,11 @@ const TripDetails = () => {
           }}>🚌</Text> {formateData(tripDetails.tripData)?.traveler.title}
         </Text>
 
-        <FlightInfo flightData={tripDetails?.tripPlan?.flight_details}/>
+        <FlightInfo flightData={tripDetails?.tripPlan?.flight_details} />
 
-        <HotelList hotelList={tripDetails?.tripPlan?.hotel_options}/>
-          
-        <PlannedTrip details={tripDetails?.tripPlan?.daily_plan}/>
+        <HotelList hotelList={tripDetails?.tripPlan?.hotel_options} />
+
+        <PlannedTrip details={tripDetails?.tripPlan?.daily_plan} />
 
       </ScrollView>
 
